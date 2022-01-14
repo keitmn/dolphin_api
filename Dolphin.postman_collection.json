@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "f006a81c-b105-4969-8286-769273436557",
+		"name": "Dolphin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "ВАШ_ЛОГИН",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "<ВАШ_ПАРОЛЬ>",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://anty-api.com/auth/login",
+					"protocol": "https",
+					"host": [
+						"anty-api",
+						"com"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProfiles",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "<ВСТАВЬТЕ_ВАШ_ТОКЕН>",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://anty-api.com/browser_profiles",
+					"protocol": "https",
+					"host": [
+						"anty-api",
+						"com"
+					],
+					"path": [
+						"browser_profiles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StartProfile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/v1.0/browser_profiles/PROFILE_ID/start?automation=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"v1.0",
+						"browser_profiles",
+						"PROFILE_ID",
+						"start"
+					],
+					"query": [
+						{
+							"key": "automation",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
