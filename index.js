@@ -97,7 +97,7 @@ const automation = async profileId => {
         return
     }
 
-    for(let i = 0; i < profilesIds.lengtn; i++) {
+    for(let i = 0; i < profilesIds.length; i++) {
         automation(profilesIds[i])
     }
 })()
